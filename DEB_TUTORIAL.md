@@ -13,9 +13,9 @@ build.sh - this script creates the package itself and checks its correctness usi
 ```
 These scripts are available for download:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/build/md5sums.sh --no-check-certificate
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/build/remove~.sh --no-check-certificate
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/build/build.sh --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/deb/build/md5sums.sh --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/deb/build/remove~.sh --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/deb/build/build.sh --no-check-certificate
 ```
 For using these scripts, it is necessary to first set the following variables:
 * SRC_BIN - absolute path to the binary executable that is aimed to be added to the package.
@@ -30,7 +30,7 @@ Creating a deb package for the exporter involves the following steps:
 
 ### 1. Creating the directory and file structure:
 
-First we create the structure of directories and files. For simplicity, this sctructure can be downloaded from [here](https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/debian.tar.gz). Alternatively, an older version of the deb package can be also extracted which can be subsequently updated.
+First we create the structure of directories and files. For simplicity, this sctructure can be downloaded from [here](https://github.com/cnl-monica/mybeem/tree/master/deb/debian.tar.gz). Alternatively, an older version of the deb package can be also extracted which can be subsequently updated.
 ```
 debian/DEBIAN/conffiles          - contains the paths of the configuration files ( /etc/mybeem/config.xml, /etc/init.d/mybeemd )
 debian/DEBIAN/control            - contains information about the package and the program
