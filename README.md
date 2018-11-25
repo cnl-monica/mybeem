@@ -32,6 +32,11 @@ MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line
  * [User Documentation PDF](https://github.com/cnl-monica/mybeem/tree/master/doc/mybeem_v1.1-9_PP.pdf)
  * [Technical Documenation PDF](https://github.com/cnl-monica/mybeem/tree/master/doc/mybeem_v1.1-9_SP.pdf)
 
+## Other useful documents
+------------------------------------------------
+ *   [Tutorial on creating a DEB installation package for MyBeem](DEB_TUTORIAL.md)
+ *   [Tutorial on implementating a new information element in MyBeem](NEW_IE_TUTORIAL.md)
+
 ## System Requirements
 -----------------------
 * **Operating System:** GNU/Linux *i386* or *amd64* architecture
@@ -245,8 +250,3 @@ The program can be configured using the **conﬁg.xml** configuration file. The 
 | dpi | (sub)label for DPI related configuration |
 | doDPI | sets DPI to on/off |
 | protofile | file with protocols |
-
-## Other useful documents
-------------------------------------------------
- *   [Tutorial on creating a DEB installation package for MyBeem](DEB_TUTORIAL.md)
- *   [Tutorial on implementating a new information element in MyBeem](NEW_IE_TUTORIAL.md)
