@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration>
+	<interfaces>
+		<interface>
+				<name>eth0</name>
+			<pcapFilter>ip or ip6</pcapFilter>
+<!--			<dumpFile>test.dump</dumpFile>	-->
+<!-- sampling:
+     type:	0 - none (all packets are sampled)
+     		1 - systematic count-based (parameter1 - number of sampled packets in a row, parameter2 - number of unsampled packets in a row)
+		2 - systematic time-based (parameter1 - interval lenght of sampling in seconds [integer], parameter2 - interval length of not sampling in seconds [integer])
+		3 - random n-of-N (parameter1 - number of selected packets, parameter2 - number of packets to select from [must be lower than 1000 and greater than parameter1])
+		4 - uniform probability (parameter1 - probability of sampling [%], parameter2 - irrelevant)
+		5 - non-uniform probability (parameter1 - start of "sure sampled" interval [secs from epoch (0:00, 1.1.1970)], parameter2 - end of "sure sampled" interval [secs from epoch])
+-->
+			<samplingType>0</samplingType>
+			<samplingParam1>4</samplingParam1>
+			<samplingParam2>10</samplingParam2>
+		</interface>
+<!--		<interface>
+			<name>eth2</name>
+			<pcapFilter>ip</pcapFilter>
+			<dumpFile>test.dump</dumpFile>
+			<samplingType>0</samplingType>
+			<samplingParam1>4</samplingParam1>
+			<samplingParam2>10</samplingParam2>
+		</interface>-->
+	</interfaces>
+ <observationPointID>124</observationPointID>
+ <observationDomainID>0</observationDomainID>
+  	<flows>
+  	<flowCacheSize>2048</flowCacheSize>
+  	<packetCacheSize>20480</packetCacheSize>
+  	<!-- in miliseconds smaller then activeTimeout -->
+  	<passiveTimeout>10000</passiveTimeout>
+  	<!-- in miliseconds -->
+	<activeTimeout>5000</activeTimeout>
+	<biflows>false</biflows>
+  	</flows>
+  <templates>
+  	<template id="257">
+  		<field>1</field>    	<!-- octetDeltaCount -->	
+  		<field>2</field>    	<!-- packetDeltaCount -->
+		<field>4</field>	<!-- protocolIdentifier -->		
+		<field>5</field>	<!-- ipClassOfService -->		
+		<field>7</field>	<!-- sourceTransportPort -->
+		<field>8</field>	<!-- sourceIPv4Address -->
+		<field>11</field>   	<!-- destinationTransportPort -->
+		<field>12</field>	<!-- destinationIPv4Address -->
+		<field>21</field>	<!-- flowEndSysUpTime -->
+		<field>22</field>	<!-- flowStartSysUpTime -->
+		<!-- 10 -->
+		<field>27</field>	<!-- sourceIPv6Address -->		
+		<field>28</field>	<!-- destinationIPv6Address -->
+		<field>31</field>	<!-- flowLabelIPv6 -->
+		<field>32</field>	<!-- icmpTypeCodeIPv4 -->
+		<field>33</field>	<!-- igmpType -->		
+		<field>36</field>	<!-- flowActiveTimeout (activeTimeout) -->
+		<field>37</field>	<!-- flowIdleTimeout (passiveTimeout) -->
+		<field>54</field>	<!-- fragmentIdentification -->
+		<field>55</field>	<!-- postIpClassOfService -->
+                <field>56</field>	<!-- sourceMacAddress -->
+		<!-- 20 -->
+                <field>60</field>	<!-- ipVersion -->
+		<field>80</field>	<!-- destinationMacAddress -->
+		<field>85</field>	<!-- octetTotalCount -->
+		<field>86</field>	<!-- packetTotalCount -->
+		<field>88</field>	<!-- fragmentOffset -->
+		<field>95</field>	<!-- applicationId -->
+		<field>96</field>	<!-- applicationName -->
+		<field>130</field>	<!-- exporterIPv4Address -->
+		<field>131</field>	<!-- exporterIPv6Address -->
+		<field>132</field>	<!-- droppedOctetDeltaCount -->               
+		<!-- 30 --> 
+		<field>133</field>	<!-- droppedPacketDeltaCount -->		
+		<field>136</field>	<!-- flowEndReason -->
+                <field>138</field>	<!-- observationPointId -->
+		<field>139</field>	<!-- icmpTypeCodeIPv6 -->		
+		<field>148</field>	<!-- flowID -->
+		<field>149</field>	<!-- observationDomainId -->		
+		<field>152</field>	<!-- flowStartMilliseconds -->
+		<field>153</field>	<!-- flowEndMilliseconds -->
+		<field>154</field>	<!-- flowStartMicroseconds -->
+		<field>155</field>	<!-- flowEndMicroseconds -->
+		<!-- 40 -->		
+		<field>156</field>	<!-- flowStartNanoseconds -->
+		<field>157</field>	<!-- flowEndNanoseconds -->
+		<field>158</field> 	<!-- flowStartDeltaMicroSeconds-->
+		<field>159</field>	<!-- flowEndDeltaMicroSeconds-->
+		<field>160</field>	<!-- systemInitTimeMilliseconds -->		
+		<field>161</field>	<!-- flowDurationMilliseconds -->		
+		<field>162</field>	<!-- flowDurationMicroseconds -->
+		<field>173</field>	<!-- flowKeyIndicator -->
+		<field>176</field>	<!-- icmpTypeIPv4 -->
+		<field>177</field>	<!-- icmpCodeIPv4 -->
+		<!-- 50 -->
+		<field>178</field>	<!-- icmpTypeIPv6 -->
+		<field>179</field>	<!-- icmpCodeIPv6 -->
+		<field>184</field>	<!-- tcpSequenceNumber -->
+		<field>185</field>	<!-- tcpAcknowledgementNumber -->
+		<field>186</field>	<!-- tcpWindowSize -->
+		<field>187</field>	<!-- tcpUrgentPointer -->
+		<field>189</field>	<!-- ipHeaderLength -->
+		<field>190</field>  	<!-- totalLengthIPV4 -->
+		<field>192</field>	<!-- ipTTL -->
+		<field>193</field>	<!-- nextHeaderIPV6 -->	
+		<!-- 60 -->	
+		<field>195</field>	<!-- ipDiffServCodePoint -->
+		<field>196</field>	<!-- ipPrecedence -->
+		<field>197</field>	<!-- fragmentFlags -->
+		<field>198</field>	<!-- octetDeltaSumOfSquares -->	
+		<field>199</field>	<!-- octetTotalSumOfSquares -->
+		<field>204</field>	<!-- ipPayloadLength -->
+		<field>206</field>	<!-- isMulticast -->
+		<field>207</field>	<!-- ipv4IHL -->
+		<field>211</field>	<!-- collectorIPv4Address -->
+		<field>212</field>	<!-- collectorIPv6Address -->
+		<!-- 70 -->
+		<field>213</field>	<!-- exportInterface -->
+		<field>214</field>	<!-- exportProtocolVersion -->
+		<field>215</field>	<!-- exportTransportProtocol -->
+		<field>216</field>	<!-- collectorTransportPort -->
+		<field>217</field>	<!-- exporterTransportPort -->
+		<field>218</field>	<!-- tcpSynTotalCount -->
+		<field>219</field>	<!-- tcpFinTotalCount -->	
+		<field>220</field>	<!-- tcpRstTotalCount -->
+		<field>221</field>	<!-- tcpPshTotalCount -->
+		<field>222</field>	<!-- tcpAckTotalCount -->
+		<!-- 80 -->
+		<field>223</field>	<!-- tcpUrgTotalCount -->
+		<field>224</field>	<!--ipTotalLength-->
+		<field>375</field>	<!--originalFLowsPresent-->
+		<field>376</field>	<!--originalFLowsInitiated-->
+		<field>377</field>	<!--originalFLowsCompleted-->
+		<field>378</field> 	<!--distinctCountOfSourceIPAddress-->
+		<field>379</field> 	<!--distinctCountOfDestinationIPAddress-->
+		<field>380</field> 	<!--distinctCountOfSourceIPv4Address-->
+		<field>381</field> 	<!--distinctCountOfDestinationIPv4Address-->
+		<field>382</field> 	<!--distinctCountOfSourceIPv6Address-->
+		<!-- 90 -->
+		<field>383</field> 	<!--distinctCountOfDestinationIPv6Address-->
+		<field enterprise="26235">240</field>	<!-- roundTripTimeNanoseconds -->
+		<field enterprise="26235">241</field>	<!-- packetPairsTotalCount -->		
+		<field enterprise="26235">242</field>	<!-- firstPacketID -->
+		<field enterprise="26235">243</field>	<!-- lastPacketID -->
+		<field enterprise="26235">244</field>	<!-- flowStartAfterExport -->
+		<!-- 96 -->
+	</template>
+  </templates>
+  <mediator>
+	<doMediation>false</doMediation>
+	<host>127.0.0.1</host>
+	<port>4739</port>
+	<version>10</version>
+	<protocol>UDP</protocol>
+	<refreshTemplateTime>5</refreshTemplateTime>
+	<reconnectFrequency>60</reconnectFrequency>
+	<connectionTimeout>300</connectionTimeout>
+  </mediator>
+  <collector>
+	<version>10</version>
+	<host>127.0.0.1</host>
+	<!-- <host>147.232.241.142</host> -->
+	<!-- <host>::1</host> -->
+	<port>4739</port>
+  	<protocol>UDP</protocol>
+	<refreshTemplateTime>5</refreshTemplateTime>
+	<reconnectFrequency>60</reconnectFrequency>
+	<connectionTimeout>300</connectionTimeout>
+  </collector>
+  <synchronization>
+  	<doSync>false</doSync>
+	<port>5545</port>
+	<serverAddress>127.0.0.1</serverAddress>
+	<serverPort>5544</serverPort>
+  </synchronization>
+  <logging>
+        <doLog>false</doLog>
+	<sendingProtocol>tcp</sendingProtocol>
+	<syslogServIP>147.232.241.139</syslogServIP>
+	<syslogServPort>4739</syslogServPort>
+	<messageLogLevel>6</messageLogLevel>
+  </logging>
+<!-- aggregation priority of IEs,
+  fifth column => first IE to aggregate-->
+  <!-- supported also for IPv6 addresses, if want to reduce both, write in the column 827,
+  where 8 -> ipv4srcAddress and 27 -> ipv6srcAddress -->
+  <!-- protocolIdentifier -> 4 -->
+  <!-- sourceTransportPort -> 7 -->
+  <!-- sourceIPv4Address -> 8 -->
+  <!-- destinationTransportPort -> 11 -->
+  <!-- destinationIPv4Address -> 12 -->
+  <!-- sourceIPv6Address -> 27 -->
+  <!-- destinationIPv6Address -> 28 -->
+  <!-- sourceIPv4Address + sourceIPv6Address -> 827 -->
+  <!-- destinationIPv4Address + destinationIPv6Address -> 1228-->	  
+  	<aggregation>
+  		<!-- time interval in MILISECONDS, defines the period, after the flow_cache will be aggregated and reorganized (repeating each time after reaching this value) -->
+  		<aggregationTrigger>250</aggregationTrigger>
+  		 <!-- flows with element octetTotalCount less then set value will be aggregated-->
+  		<octetTotalCountForAggregation>10000</octetTotalCountForAggregation>
+  		<doAggregation>false</doAggregation>
+  		<!-- if <doAggregation> == false && if <automaticAggreg> == "true", aggregation will be automaticaly started in critical situation, when the amount of free flow memory is 1/4 of the allocated size and will not turn off till the end of packet capturing, if such a situation does not occure, aggregation will not be started, original flows will be exported-->
+  		<automaticAggregation>false</automaticAggregation>
+  		<!-- elements to agregate, fourth element is aggregated first-->
+  		<first>11</first>
+  		<second>7</second> 
+  		<third>1228</third>
+  		<fourth>827</fourth>
+  	</aggregation>
+        <dpi>
+            <doDpi>true</doDpi>
+            <protofile>protos.txt</protofile>
+        </dpi>
+</configuration>
