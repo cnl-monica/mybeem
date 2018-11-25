@@ -9,16 +9,8 @@ The export of flow records represents a push-based mechanism, where the data are
 
 MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line application without any GUI. It provides logging on various levels (info, warning, debug, etc.) that are shown in the terminal. MyBeem was developed using open-source technologies.
 
-## Documentation
-
-**The documentation is available only in Slovak language:**
- * [User Documentation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_PP.pdf)
- * [Technical Documenation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf)
-
-## Program Information
-
-*  **Version**: 1.1-9 
-*  **Version state**: developed
+*  **Latest version**: 1.1-9 
+*  **Version state**: stable
 *  **Developers**:
       *   Dávid Farkas
       *   Samuel Tremko
@@ -28,6 +20,12 @@ MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line
  
 *   **License**: GNU GPLv3
 *   **Implementation environment**: C programming language in GNU/Linux environment 
+
+## Documentation
+
+**The documentation is available only in Slovak language:**
+ * [User Documentation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_PP.pdf)
+ * [Technical Documenation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf)
 
 ## System Requirements
 -----------------------
