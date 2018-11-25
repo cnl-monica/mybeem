@@ -24,8 +24,8 @@ MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line
 ## Documentation
 
 **The documentation is available only in Slovak language:**
- * [User Documentation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_PP.pdf)
- * [Technical Documenation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf)
+ * [User Documentation PDF](https://github.com/cnl-monica/mybeem/tree/master/doc/mybeem_v1.1-9_PP.pdf)
+ * [Technical Documenation PDF](https://github.com/cnl-monica/mybeem/tree/master/doc/mybeem_v1.1-9_SP.pdf)
 
 ## System Requirements
 -----------------------
@@ -50,13 +50,13 @@ MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line
 --------------------------------------------
 Installation on **i386** architectures:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/mybeem_1.1-9_i386.deb --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/deb/mybeem_1.1-9_i386.deb --no-check-certificate
 sudo dpkg -i mybeem_1.1-9_i386.deb
 ```
 
 Installation on **amd64** architectures:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/deb/mybeem_1.1-9_amd64.deb --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/deb/mybeem_1.1-9_amd64.deb --no-check-certificate
 sudo dpkg -i mybeem_1.1-9_amd64.deb
 ```
 
@@ -77,7 +77,7 @@ sudo apt-get install libpcap-dev libxml2-dev libssl-dev libsctp-dev libsctp-dev 
 ```
 ##### 2. Download nDPI v1.5.2:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
 ```
 ##### 3. Installation of nDPI v1.5.2:
 ```bash
@@ -131,7 +131,7 @@ sudo apt-get install libpcap-dev libxml2-dev libssl-dev libsctp-dev libsctp-dev 
 ```
 ##### 2. Download nDPI v1.5.2:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/raw/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/tree/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
 ```
 ##### 3. Install nDPI v1.5.2:
 ```bash
