@@ -95,7 +95,7 @@ wget https://github.com/cnl-monica/mybeem/archive/master.zip --no-check-certific
 ```
 ##### 5. Compile the code:
 ```bash
-unzip mybeem-master.zip
+unzip master.zip
 cd mybeem-master/src/mybeem
 make
 ```
@@ -149,7 +149,7 @@ wget https://github.com/cnl-monica/mybeem/archive/master.zip --no-check-certific
 ```
 ##### 5. Compile the code:
 ```bash
-unzip mybeem-master.zip
+unzip master.zip
 cd mybeem-master/src/mybeem
 make
 ```
