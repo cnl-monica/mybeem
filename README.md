@@ -9,13 +9,13 @@ The export of flow records represents a push-based mechanism, where the data are
 
 MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line application without any GUI. It provides logging on various levels (info, warning, debug, etc.) that are shown in the terminal. MyBeem was developed using open-source technologies.
 
-## Architecture
-------------------------
-The individual components (modules) are described in the [technical documentation](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf) **(available only in Slovak language)**.
+## Documentation
 
-![mybeem](https://git.cnl.sk/uploads/monica/slameter_exporter/081a76b16d/mybeem.png)
+**The documentation is available only in Slovak language:**
+ * [User Documentation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_PP.pdf)
+ * [Technical Documenation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf)
 
-## ?
+## Program Information
 
 *  **Version**: 1.1-9 
 *  **Version state**: developed
@@ -28,14 +28,6 @@ The individual components (modules) are described in the [technical documentatio
  
 *   **License**: GNU GPLv3
 *   **Implementation environment**: C programming language in GNU/Linux environment 
-
-*  **Documentation (available only in Slovak language):**
-      *   [User Documentation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_PP.pdf)
-      *   [Technical Documenation PDF](https://git.cnl.sk/monica/slameter_exporter/raw/master/doc/mybeem_v1.1-9_SP.pdf)
-
-*  **Other related documents**
-      *   [Tutorial on creating a DEB installation package for MyBeem](mybeem_debian)
-      *   [Tutorial on implementating a new information element in MyBeem](mybeem_newIE)
 
 ## System Requirements
 -----------------------
@@ -81,15 +73,15 @@ sudo /etc/init.d/mybeemd start
 
 ## Manual installation 
 -------------------------------
-### 1. Install the following packages:
+##### 1. Install the following packages:
 ```bash
 sudo apt-get install libpcap-dev libxml2-dev libssl-dev libsctp-dev libsctp-dev libssl0.9.8 libsctp-dev libxml2-utils gawk gcc autoconf build-essential libtool
 ```
-### 2. Download nDPI v1.5.2:
+##### 2. Download nDPI v1.5.2:
 ```bash
 wget https://git.cnl.sk/monica/slameter_exporter/raw/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
 ```
-### 3. Installation of nDPI v1.5.2:
+##### 3. Installation of nDPI v1.5.2:
 ```bash
 sudo su
 tar zxvf nDPI_1.5.2.tar.gz
@@ -99,21 +91,21 @@ make
 make install
 echo "export LD_LIBRARY_PATH=\"/usr/local/lib:$LD_LIBRARY_PATH\"" >> ~/.bashrc
 ```
-### 4. Download the source code:
+##### 4. Download the source code:
 ```bash
 wget https://git.cnl.sk/monica/slameter_exporter/repository/archive.tar.gz --no-check-certificate
 ```
-### 5. Compile the code:
+##### 5. Compile the code:
 ```bash
 tar zxvf archive.tar.gz
 cd slameter_exporter.git/src/mybeem
 make
 ```
-### 6. Change the name of the binary executable (due to historical naming convention):
+##### 6. Change the name of the binary executable (due to historical naming convention):
 ```bash
 mv beem mybeem
 ```
-### 7. Creating the required directories:
+##### 7. Creating the required directories:
 ```bash
 sudo mkdir /var/log/mybeem
 sudo mkdir /etc/mybeem
@@ -124,7 +116,7 @@ sudo cp mybeem /usr/sbin/
 sudo cp config.xml /etc/mybeem/
 sudo cp mybeemd /etc/init.d/
 ```
-### 9. The program can be run using the following command:
+##### 9. The program can be run using the following command:
 ```bash
 sudo mybeem
 ```
@@ -135,15 +127,15 @@ sudo /etc/init.d/mybeemd start
 
 ## Running the program via source code compilation
 ------------------------------------------------
-### 1. Install the following packages:
+##### 1. Install the following packages:
 ```bash
 sudo apt-get install libpcap-dev libxml2-dev libssl-dev libsctp-dev libsctp-dev libssl0.9.8 libsctp-dev libxml2-utils gawk gcc autoconf build-essential libtool
 ```
-### 2. Download nDPI v1.5.2:
+##### 2. Download nDPI v1.5.2:
 ```bash
 wget https://git.cnl.sk/monica/slameter_exporter/raw/master/lib/nDPI_1.5.2.tar.gz --no-check-certificate
 ```
-### 3. Install nDPI v1.5.2:
+##### 3. Install nDPI v1.5.2:
 ```bash
 sudo su
 tar zxvf nDPI_1.5.2.tar.gz
@@ -153,17 +145,22 @@ make
 make install
 echo "export LD_LIBRARY_PATH=\"/usr/local/lib:$LD_LIBRARY_PATH\"" >> ~/.bashrc
 ```
-### 4. Download the source code:
+##### 4. Download the source code:
 ```bash
 wget https://git.cnl.sk/monica/slameter_exporter/repository/archive.tar.gz --no-check-certificate
 ```
-### 5. Compile the code:
+##### 5. Compile the code:
 ```bash
 tar zxvf archive.tar.gz
 cd slameter_exporter.git/src/mybeem
 make
 ```
-### 6. Run the program:
+##### 6. Run the program:
 ```bash
 sudo ./beem -c config.xml
 ```
+
+## Other useful documents
+------------------------------------------------
+ *   [Tutorial on creating a DEB installation package for MyBeem](mybeem_debian)
+ *   [Tutorial on implementating a new information element in MyBeem](mybeem_newIE)
