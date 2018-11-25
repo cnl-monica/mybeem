@@ -91,12 +91,12 @@ echo "export LD_LIBRARY_PATH=\"/usr/local/lib:$LD_LIBRARY_PATH\"" >> ~/.bashrc
 ```
 ##### 4. Download the source code:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/repository/archive.tar.gz --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/archive/master.zip --no-check-certificate
 ```
 ##### 5. Compile the code:
 ```bash
-tar zxvf archive.tar.gz
-cd slameter_exporter.git/src/mybeem
+unzip mybeem-master.zip
+cd mybeem-master/src/mybeem
 make
 ```
 ##### 6. Change the name of the binary executable (due to historical naming convention):
@@ -145,12 +145,12 @@ echo "export LD_LIBRARY_PATH=\"/usr/local/lib:$LD_LIBRARY_PATH\"" >> ~/.bashrc
 ```
 ##### 4. Download the source code:
 ```bash
-wget https://git.cnl.sk/monica/slameter_exporter/repository/archive.tar.gz --no-check-certificate
+wget https://github.com/cnl-monica/mybeem/archive/master.zip --no-check-certificate
 ```
 ##### 5. Compile the code:
 ```bash
-tar zxvf archive.tar.gz
-cd slameter_exporter.git/src/mybeem
+unzip mybeem-master.zip
+cd mybeem-master/src/mybeem
 make
 ```
 ##### 6. Run the program:
