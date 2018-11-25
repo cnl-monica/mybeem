@@ -165,5 +165,5 @@ sudo ./beem -c config.xml
 
 ## Other useful documents
 ------------------------------------------------
- *   [Tutorial on creating a DEB installation package for MyBeem](mybeem_debian)
- *   [Tutorial on implementating a new information element in MyBeem](mybeem_newIE)
+ *   [Tutorial on creating a DEB installation package for MyBeem](DEB_TUTORIAL.md)
+ *   [Tutorial on implementating a new information element in MyBeem](NEW_IE_TUTORIAL.md)
