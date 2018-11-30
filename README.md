@@ -15,7 +15,7 @@ The export of flow records represents a push-based mechanism, where the data are
 MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line application without any GUI. It provides logging on various levels (info, warning, debug, etc.) that are shown in the terminal. MyBeem was developed using open-source technologies.
 
 *  **Latest version**: 1.1-9 
-*  **Version state**: stable
+*  **Version state**: stable, **the development was concluded in 2015**
 *  **Developers**:
       *   Dávid Farkas
       *   Samuel Tremko
