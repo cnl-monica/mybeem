@@ -17,6 +17,7 @@ MyBeem is in full conformity with IPFIX, Netflow and PSAMP. It is a command-line
       *   Dávid Farkas
       *   Samuel Tremko
       *   Tomáš Kecsey
+      *   Adrián Pekár
       *   Ľuboš Husivarga
       *   Viliam Lorinc
  
